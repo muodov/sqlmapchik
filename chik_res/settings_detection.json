@@ -1,0 +1,66 @@
+[
+    {
+        "section": "Detection", 
+        "desc": "Level of tests to perform (1-5, default 1)", 
+        "type": "numeric", 
+        "key": "level", 
+        "title": "--level"
+    }, 
+    {
+        "section": "Detection", 
+        "desc": "Risk of tests to perform (0-3, default 1)", 
+        "type": "numeric", 
+        "key": "risk", 
+        "title": "--risk"
+    }, 
+    {
+        "section": "Detection", 
+        "desc": "String to match when query is evaluated to True", 
+        "type": "string", 
+        "key": "string", 
+        "title": "--string"
+    }, 
+    {
+        "section": "Detection", 
+        "desc": "String to match when query is evaluated to False", 
+        "type": "string", 
+        "key": "not-string", 
+        "title": "--not-string"
+    }, 
+    {
+        "section": "Detection", 
+        "desc": "Regexp to match when query is evaluated to True", 
+        "type": "string", 
+        "key": "regexp", 
+        "title": "--regexp"
+    }, 
+    {
+        "section": "Detection", 
+        "desc": "HTTP code to match when query is evaluated to True", 
+        "type": "string", 
+        "key": "code", 
+        "title": "--code"
+    }, 
+    {
+        "title": "--text-only", 
+        "section": "Detection", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "text-only", 
+        "type": "bool", 
+        "desc": "Compare pages based only on the textual content"
+    }, 
+    {
+        "title": "--titles", 
+        "section": "Detection", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "titles", 
+        "type": "bool", 
+        "desc": "Compare pages based only on their titles"
+    }
+]

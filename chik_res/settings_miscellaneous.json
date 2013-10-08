@@ -1,0 +1,126 @@
+[
+    {
+        "section": "Miscellaneous", 
+        "desc": "Use short mnemonics (e.g. \"flu,bat,ban,tec=EU\")", 
+        "type": "string", 
+        "key": "z", 
+        "title": "-z"
+    }, 
+    {
+        "section": "Miscellaneous", 
+        "desc": "Set question answers (e.g. \"quit=N,follow=N\")", 
+        "type": "string", 
+        "key": "answers", 
+        "title": "--answers"
+    }, 
+    {
+        "title": "--check-waf", 
+        "section": "Miscellaneous", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "check-waf", 
+        "type": "bool", 
+        "desc": "Heuristically check for WAF/IPS/IDS protection"
+    }, 
+    {
+        "title": "--cleanup", 
+        "section": "Miscellaneous", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "cleanup", 
+        "type": "bool", 
+        "desc": "Clean up the DBMS by sqlmap specific UDF and tables"
+    }, 
+    {
+        "title": "--dependencies", 
+        "section": "Miscellaneous", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "dependencies", 
+        "type": "bool", 
+        "desc": "Check for missing (non-core) sqlmap dependencies"
+    }, 
+    {
+        "title": "--gpage", 
+        "section": "Miscellaneous", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "gpage", 
+        "type": "bool", 
+        "desc": "Use Google dork results from specified page number"
+    }, 
+    {
+        "title": "--identify-waf", 
+        "section": "Miscellaneous", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "identify-waf", 
+        "type": "bool", 
+        "desc": "Make a through testing for a WAF/IPS/IDS protection"
+    }, 
+    {
+        "title": "--mobile", 
+        "section": "Miscellaneous", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "mobile", 
+        "type": "bool", 
+        "desc": "Imitate smartphone through HTTP User-Agent header"
+    }, 
+    {
+        "title": "--page-rank", 
+        "section": "Miscellaneous", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "page-rank", 
+        "type": "bool", 
+        "desc": "Display page rank (PR) for Google dork results"
+    }, 
+    {
+        "title": "--purge-output", 
+        "section": "Miscellaneous", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "purge-output", 
+        "type": "bool", 
+        "desc": "Safely remove all content from output directory"
+    }, 
+    {
+        "title": "--smart", 
+        "section": "Miscellaneous", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "smart", 
+        "type": "bool", 
+        "desc": "Conduct through tests only if positive heuristic(s)"
+    }, 
+    {
+        "title": "--wizard", 
+        "section": "Miscellaneous", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "wizard", 
+        "type": "bool", 
+        "desc": "Simple wizard interface for beginner users"
+    }
+]

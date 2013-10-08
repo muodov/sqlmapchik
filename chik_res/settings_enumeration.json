@@ -1,0 +1,325 @@
+[
+    {
+        "title": "--fingerprint", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "fingerprint", 
+        "type": "bool", 
+        "desc": "Perform an extensive DBMS version fingerprint"
+    }, 
+    {
+        "title": "--all", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "all", 
+        "type": "bool", 
+        "desc": "Retrieve everything"
+    }, 
+    {
+        "title": "--banner", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "banner", 
+        "type": "bool", 
+        "desc": "Retrieve DBMS banner"
+    }, 
+    {
+        "title": "--current-user", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "current-user", 
+        "type": "bool", 
+        "desc": "Retrieve DBMS current user"
+    }, 
+    {
+        "title": "--current-db", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "current-db", 
+        "type": "bool", 
+        "desc": "Retrieve DBMS current database"
+    }, 
+    {
+        "title": "--hostname", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "hostname", 
+        "type": "bool", 
+        "desc": "Retrieve DBMS server hostname"
+    }, 
+    {
+        "title": "--is-dba", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "is-dba", 
+        "type": "bool", 
+        "desc": "Detect if the DBMS current user is DBA"
+    }, 
+    {
+        "title": "--users", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "users", 
+        "type": "bool", 
+        "desc": "Enumerate DBMS users"
+    }, 
+    {
+        "title": "--passwords", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "passwords", 
+        "type": "bool", 
+        "desc": "Enumerate DBMS users password hashes"
+    }, 
+    {
+        "title": "--privileges", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "privileges", 
+        "type": "bool", 
+        "desc": "Enumerate DBMS users privileges"
+    }, 
+    {
+        "title": "--roles", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "roles", 
+        "type": "bool", 
+        "desc": "Enumerate DBMS users roles"
+    }, 
+    {
+        "title": "--dbs", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "dbs", 
+        "type": "bool", 
+        "desc": "Enumerate DBMS databases"
+    }, 
+    {
+        "title": "--tables", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "tables", 
+        "type": "bool", 
+        "desc": "Enumerate DBMS database tables"
+    }, 
+    {
+        "title": "--columns", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "columns", 
+        "type": "bool", 
+        "desc": "Enumerate DBMS database table columns"
+    }, 
+    {
+        "title": "--schema", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "schema", 
+        "type": "bool", 
+        "desc": "Enumerate DBMS schema"
+    }, 
+    {
+        "title": "--count", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "count", 
+        "type": "bool", 
+        "desc": "Retrieve number of entries for table(s)"
+    }, 
+    {
+        "title": "--dump", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "dump", 
+        "type": "bool", 
+        "desc": "Dump DBMS database table entries"
+    }, 
+    {
+        "title": "--dump-all", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "dump-all", 
+        "type": "bool", 
+        "desc": "Dump all DBMS databases tables entries"
+    }, 
+    {
+        "title": "--search", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "search", 
+        "type": "bool", 
+        "desc": "Search column(s), table(s) and/or database name(s)"
+    }, 
+    {
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "desc": "DBMS database to enumerate", 
+        "type": "string", 
+        "key": "D", 
+        "title": "-D"
+    }, 
+    {
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "desc": "DBMS database table to enumerate", 
+        "type": "string", 
+        "key": "T", 
+        "title": "-T"
+    }, 
+    {
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "desc": "DBMS database table column to enumerate", 
+        "type": "string", 
+        "key": "C", 
+        "title": "-C"
+    }, 
+    {
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "desc": "DBMS user to enumerate", 
+        "type": "string", 
+        "key": "U", 
+        "title": "-U"
+    }, 
+    {
+        "title": "--exclude-sysdbs", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "exclude-sysdbs", 
+        "type": "bool", 
+        "desc": "Exclude DBMS system databases when enumerating tables"
+    }, 
+    {
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "desc": "First query output entry to retrieve", 
+        "type": "string", 
+        "key": "start", 
+        "title": "--start"
+    }, 
+    {
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "desc": "Last query output entry to retrieve", 
+        "type": "string", 
+        "key": "stop", 
+        "title": "--stop"
+    }, 
+    {
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "desc": "First query output word character to retrieve", 
+        "type": "string", 
+        "key": "first", 
+        "title": "--first"
+    }, 
+    {
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "desc": "Last query output word character to retrieve", 
+        "type": "string", 
+        "key": "last", 
+        "title": "--last"
+    }, 
+    {
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "desc": "SQL statement to be executed", 
+        "type": "string", 
+        "key": "sql-query", 
+        "title": "--sql-query"
+    }, 
+    {
+        "title": "--sql-shell", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "sql-shell", 
+        "type": "bool", 
+        "desc": "Prompt for an interactive SQL shell"
+    }, 
+    {
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "desc": "Execute SQL statements from given file(s)", 
+        "type": "path", 
+        "key": "sql-file", 
+        "title": "--sql-file"
+    }, 
+    {
+        "title": "--common-tables", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "common-tables", 
+        "type": "bool", 
+        "desc": "Check existence of common tables"
+    }, 
+    {
+        "title": "--common-columns", 
+        "section": "Fingerprint, Enumeration and Bruteforce", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "common-columns", 
+        "type": "bool", 
+        "desc": "Check existence of common columns"
+    }
+]

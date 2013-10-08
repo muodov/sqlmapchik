@@ -1,0 +1,102 @@
+[
+    {
+        "section": "Injection", 
+        "desc": "Testable parameter(s)", 
+        "type": "string", 
+        "key": "p", 
+        "title": "-p"
+    }, 
+    {
+        "section": "Injection", 
+        "desc": "Skip testing for given parameter(s)", 
+        "type": "string", 
+        "key": "skip", 
+        "title": "--skip"
+    }, 
+    {
+        "section": "Injection", 
+        "desc": "Force back-end DBMS to this value", 
+        "type": "string", 
+        "key": "dbms", 
+        "title": "--dbms"
+    }, 
+    {
+        "section": "Injection", 
+        "desc": "DBMS authentication credentials (user:password)", 
+        "type": "string", 
+        "key": "dbms-cred", 
+        "title": "--dbms-cred"
+    }, 
+    {
+        "section": "Injection", 
+        "desc": "Force back-end DBMS operating system to this value", 
+        "type": "string", 
+        "key": "os", 
+        "title": "--os"
+    }, 
+    {
+        "title": "--invalid-bignum", 
+        "section": "Injection", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "invalid-bignum", 
+        "type": "bool", 
+        "desc": "Use big numbers for invalidating values"
+    }, 
+    {
+        "title": "--invalid-logical", 
+        "section": "Injection", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "invalid-logical", 
+        "type": "bool", 
+        "desc": "Use logical operations for invalidating values"
+    }, 
+    {
+        "title": "--no-cast", 
+        "section": "Injection", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "no-cast", 
+        "type": "bool", 
+        "desc": "Turn off payload casting mechanism"
+    }, 
+    {
+        "title": "--no-escape", 
+        "section": "Injection", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "no-escape", 
+        "type": "bool", 
+        "desc": "Turn off string escaping mechanism"
+    }, 
+    {
+        "section": "Injection", 
+        "desc": "Injection payload prefix string", 
+        "type": "string", 
+        "key": "prefix", 
+        "title": "--prefix"
+    }, 
+    {
+        "section": "Injection", 
+        "desc": "Injection payload suffix string", 
+        "type": "string", 
+        "key": "suffix", 
+        "title": "--suffix"
+    }, 
+    {
+        "section": "Injection", 
+        "desc": "Use given script(s) for tampering injection data", 
+        "type": "string", 
+        "key": "tamper", 
+        "title": "--tamper"
+    }
+]

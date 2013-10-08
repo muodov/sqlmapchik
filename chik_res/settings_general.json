@@ -1,0 +1,176 @@
+[
+    {
+        "title": "-v", 
+        "section": "General", 
+        "key": "v", 
+        "type": "options", 
+        "options": [
+            "0", 
+            "1", 
+            "2", 
+            "3", 
+            "4", 
+            "5", 
+            "6"
+        ], 
+        "desc": "0-6 (default 1)"
+    }, 
+    {
+        "section": "General", 
+        "desc": "Load session from a stored (.sqlite) file", 
+        "type": "path", 
+        "key": "s", 
+        "title": "-s"
+    }, 
+    {
+        "section": "General", 
+        "desc": "Log all HTTP traffic into a textual file", 
+        "type": "path", 
+        "key": "t", 
+        "title": "-t"
+    }, 
+    {
+        "title": "--batch", 
+        "section": "General", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "batch", 
+        "type": "bool", 
+        "desc": "Never ask for user input, use the default behaviour"
+    }, 
+    {
+        "section": "General", 
+        "desc": "Force character encoding used for data retrieval", 
+        "type": "string", 
+        "key": "charset", 
+        "title": "--charset"
+    }, 
+    {
+        "section": "General", 
+        "desc": "Crawl the website starting from the target URL", 
+        "type": "string", 
+        "key": "crawl", 
+        "title": "--crawl"
+    }, 
+    {
+        "section": "General", 
+        "desc": "Delimiting character used in CSV output (default \",\")", 
+        "type": "string", 
+        "key": "csv-del", 
+        "title": "--csv-del"
+    }, 
+    {
+        "section": "General", 
+        "desc": "Format of dumped data (CSV (default), HTML or SQLITE)", 
+        "type": "string", 
+        "key": "dump-format", 
+        "title": "--dump-format"
+    }, 
+    {
+        "title": "--eta", 
+        "section": "General", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "eta", 
+        "type": "bool", 
+        "desc": "Display for each output the estimated time of arrival"
+    }, 
+    {
+        "title": "--flush-session", 
+        "section": "General", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "flush-session", 
+        "type": "bool", 
+        "desc": "Flush session files for current target"
+    }, 
+    {
+        "title": "--forms", 
+        "section": "General", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "forms", 
+        "type": "bool", 
+        "desc": "Parse and test forms on target URL"
+    }, 
+    {
+        "title": "--fresh-queries", 
+        "section": "General", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "fresh-queries", 
+        "type": "bool", 
+        "desc": "Ignore query results stored in session file"
+    }, 
+    {
+        "title": "--hex", 
+        "section": "General", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "hex", 
+        "type": "bool", 
+        "desc": "Use DBMS hex function(s) for data retrieval"
+    }, 
+    {
+        "section": "General", 
+        "desc": "Custom output directory path", 
+        "type": "string", 
+        "key": "output-dir", 
+        "title": "--output-dir"
+    }, 
+    {
+        "title": "--parse-errors", 
+        "section": "General", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "parse-errors", 
+        "type": "bool", 
+        "desc": "Parse and display DBMS error messages from responses"
+    }, 
+    {
+        "section": "General", 
+        "desc": "Pivot column name", 
+        "type": "string", 
+        "key": "pivot-column", 
+        "title": "--pivot-column"
+    }, 
+    {
+        "title": "--save", 
+        "section": "General", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "save", 
+        "type": "bool", 
+        "desc": "Save options to a configuration INI file"
+    }, 
+    {
+        "section": "General", 
+        "desc": "Regexp to filter targets from provided proxy log", 
+        "type": "string", 
+        "key": "scope", 
+        "title": "--scope"
+    }, 
+    {
+        "section": "General", 
+        "desc": "Select tests by payloads and/or titles (e.g. ROW)", 
+        "type": "string", 
+        "key": "test-filter", 
+        "title": "--test-filter"
+    }
+]

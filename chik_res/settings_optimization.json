@@ -1,0 +1,46 @@
+[
+    {
+        "title": "-o", 
+        "section": "Optimization", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "-o", 
+        "type": "bool", 
+        "desc": "Turn on all optimization switches"
+    }, 
+    {
+        "title": "--predict-output", 
+        "section": "Optimization", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "predict-output", 
+        "type": "bool", 
+        "desc": "Predict common queries output"
+    }, 
+    {
+        "title": "--keep-alive", 
+        "section": "Optimization", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "keep-alive", 
+        "type": "bool", 
+        "desc": "Use persistent HTTP(s) connections"
+    }, 
+    {
+        "title": "--null-connection", 
+        "section": "Optimization", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "null-connection", 
+        "type": "bool", 
+        "desc": "Retrieve page length without actual HTTP response body"
+    } 
+]

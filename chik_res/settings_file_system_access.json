@@ -1,0 +1,102 @@
+[
+    {
+        "section": "File system and OS", 
+        "desc": "Read a file from the back-end DBMS file system", 
+        "type": "string", 
+        "key": "file-read", 
+        "title": "--file-read"
+    }, 
+    {
+        "section": "File system and OS", 
+        "desc": "Write a local file on the back-end DBMS file system", 
+        "type": "string", 
+        "key": "file-write", 
+        "title": "--file-write"
+    }, 
+    {
+        "section": "File system and OS", 
+        "desc": "Back-end DBMS absolute filepath to write to", 
+        "type": "string", 
+        "key": "file-dest", 
+        "title": "--file-dest"
+    }, 
+    {
+        "section": "File system and OS", 
+        "desc": "Execute an operating system command", 
+        "type": "string", 
+        "key": "os-cmd", 
+        "title": "--os-cmd"
+    }, 
+    {
+        "section": "File system and OS", 
+        "desc": "Prompt for an interactive operating system shell", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "type": "bool", 
+        "key": "os-shell", 
+        "title": "--os-shell"
+    }, 
+    {
+        "title": "--reg-read", 
+        "section": "File system and OS", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "reg-read", 
+        "type": "bool", 
+        "desc": "Read a Windows registry key value"
+    }, 
+    {
+        "title": "--reg-add", 
+        "section": "File system and OS", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "reg-add", 
+        "type": "bool", 
+        "desc": "Write a Windows registry key value data"
+    }, 
+    {
+        "title": "--reg-del", 
+        "section": "File system and OS", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "reg-del", 
+        "type": "bool", 
+        "desc": "Delete a Windows registry key value"
+    }, 
+    {
+        "section": "File system and OS", 
+        "desc": "Windows registry key", 
+        "type": "string", 
+        "key": "reg-key", 
+        "title": "--reg-key"
+    }, 
+    {
+        "section": "File system and OS", 
+        "desc": "Windows registry key value", 
+        "type": "string", 
+        "key": "reg-value", 
+        "title": "--reg-value"
+    }, 
+    {
+        "section": "File system and OS", 
+        "desc": "Windows registry key value data", 
+        "type": "string", 
+        "key": "reg-data", 
+        "title": "--reg-data"
+    }, 
+    {
+        "section": "File system and OS", 
+        "desc": "Windows registry key value type", 
+        "type": "string", 
+        "key": "reg-type", 
+        "title": "--reg-type"
+    }
+]

@@ -1,0 +1,254 @@
+[
+    {
+        "section": "Request options", 
+        "desc": "Data string to be sent through POST", 
+        "type": "string", 
+        "key": "data", 
+        "title": "--data"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "Character used for splitting parameter values", 
+        "type": "string", 
+        "key": "param-del", 
+        "title": "--param-del"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "HTTP Cookie header", 
+        "type": "string", 
+        "key": "cookie", 
+        "title": "--cookie"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "Character used for splitting cookie values", 
+        "type": "string", 
+        "key": "cookie-del", 
+        "title": "--cookie-del"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "File containing cookies in Netscape/wget format", 
+        "type": "path", 
+        "key": "load-cookies", 
+        "title": "--load-cookies"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "Ignore Set-Cookie header from response", 
+        "type": "string", 
+        "key": "drop-set-cookie", 
+        "title": "--drop-set-cookie"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "HTTP User-Agent header", 
+        "type": "string", 
+        "key": "user-agent", 
+        "title": "--user-agent"
+    }, 
+    {
+        "title": "--random-agent", 
+        "section": "Request options", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "random-agent", 
+        "type": "bool", 
+        "desc": "Use randomly selected HTTP User-Agent header"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "HTTP Host header", 
+        "type": "string", 
+        "key": "host", 
+        "title": "--host"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "HTTP Referer header", 
+        "type": "string", 
+        "key": "referer", 
+        "title": "--referer"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "Extra headers (e.g. \"Accept-Language: fr\\nETag: 123\")", 
+        "type": "string", 
+        "key": "headers", 
+        "title": "--headers"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "HTTP authentication type (Basic, Digest or NTLM)", 
+        "type": "string", 
+        "key": "auth-type", 
+        "title": "--auth-type"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "HTTP authentication credentials (name:password)", 
+        "type": "string", 
+        "key": "auth-cred", 
+        "title": "--auth-cred"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "HTTP authentication certificate (key_file)", 
+        "type": "path", 
+        "key": "auth-cert-key", 
+        "title": "--auth-cert-key"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "HTTP authentication certificate (cert_file)", 
+        "type": "path", 
+        "key": "auth-cert-cert", 
+        "title": "--auth-cert-cert"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "Use a HTTP proxy to connect to the target URL", 
+        "type": "string", 
+        "key": "proxy", 
+        "title": "--proxy"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "HTTP proxy authentication credentials (name:password)", 
+        "type": "string", 
+        "key": "proxy-cred", 
+        "title": "--proxy-cred"
+    }, 
+    {
+        "title": "--ignore-proxy", 
+        "section": "Request options", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "ignore-proxy", 
+        "type": "bool", 
+        "desc": "Ignore system default HTTP proxy"
+    }, 
+    {
+        "title": "--tor", 
+        "section": "Request options", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "tor", 
+        "type": "bool", 
+        "desc": "Use Tor anonymity network"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "Set Tor proxy port other than default", 
+        "type": "string", 
+        "key": "tor-port", 
+        "title": "--tor-port"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "Set Tor proxy type (HTTP (default), SOCKS4 or SOCKS5)", 
+        "type": "string", 
+        "key": "tor-type", 
+        "title": "--tor-type"
+    }, 
+    {
+        "title": "--check-tor", 
+        "section": "Request options", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "check-tor", 
+        "type": "bool", 
+        "desc": "Check to see if Tor is used properly"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "Delay in seconds between each HTTP request", 
+        "type": "numeric", 
+        "key": "delay", 
+        "title": "--delay"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "Seconds to wait before timeout connection (default 30)", 
+        "type": "numeric", 
+        "key": "timeout", 
+        "title": "--timeout"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "Retries when the connection timeouts (default 3)", 
+        "type": "numeric", 
+        "key": "retries", 
+        "title": "--retries"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "Randomly change value for given parameter(s)", 
+        "type": "string", 
+        "key": "randomize", 
+        "title": "--randomize"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "URL address to visit frequently during testing", 
+        "type": "string", 
+        "key": "safe-url", 
+        "title": "--safe-url"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "Test requests between two visits to a given safe URL", 
+        "type": "string", 
+        "key": "safe-freq", 
+        "title": "--safe-freq"
+    }, 
+    {
+        "title": "--skip-urlencode", 
+        "section": "Request options", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "skip-urlencode", 
+        "type": "bool", 
+        "desc": "Skip URL encoding of payload data"
+    }, 
+    {
+        "title": "--force-ssl", 
+        "section": "Request options", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "force-ssl", 
+        "type": "bool", 
+        "desc": "Force usage of SSL/HTTPS"
+    }, 
+    {
+        "title": "--hpp", 
+        "section": "Request options", 
+        "values": [
+            "False", 
+            "True"
+        ], 
+        "key": "hpp", 
+        "type": "bool", 
+        "desc": "Use HTTP parameter pollution"
+    }, 
+    {
+        "section": "Request options", 
+        "desc": "Evaluate provided Python code before the request (e.g. \"import hashlib;id2=hashlib.md5(id).hexdigest()\")", 
+        "type": "string", 
+        "key": "eval", 
+        "title": "--eval"
+    }
+]

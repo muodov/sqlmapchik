@@ -1,0 +1,51 @@
+[
+    {
+        "section": "Techniques", 
+        "desc": "SQL injection techniques to use (default \"BEUSTQ\")", 
+        "type": "string", 
+        "key": "technique", 
+        "title": "--technique"
+    }, 
+    {
+        "section": "Techniques", 
+        "desc": "Seconds to delay the DBMS response (default 5)", 
+        "type": "numeric", 
+        "key": "time-sec", 
+        "title": "--time-sec"
+    }, 
+    {
+        "section": "Techniques", 
+        "desc": "Range of columns to test for UNION query SQL injection", 
+        "type": "string", 
+        "key": "union-cols", 
+        "title": "--union-cols"
+    }, 
+    {
+        "section": "Techniques", 
+        "desc": "Character to use for bruteforcing number of columns", 
+        "type": "string", 
+        "key": "union-char", 
+        "title": "--union-char"
+    }, 
+    {
+        "section": "Techniques", 
+        "desc": "Table to use in FROM part of UNION query SQL injection", 
+        "type": "string", 
+        "key": "union-from", 
+        "title": "--union-from"
+    }, 
+    {
+        "section": "Techniques", 
+        "desc": "Domain name used for DNS exfiltration attack", 
+        "type": "string", 
+        "key": "dns-domain", 
+        "title": "--dns-domain"
+    }, 
+    {
+        "section": "Techniques", 
+        "desc": "Resulting page URL searched for second-order response", 
+        "type": "string", 
+        "key": "second-order", 
+        "title": "--second-order"
+    }
+]
