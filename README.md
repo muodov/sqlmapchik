@@ -8,10 +8,10 @@ It is primarily aimed to be used on mobile devices (currently Android is support
 Screenshots
 ----
 
-![main menu](https://github.com/muodov/sqlmapchik/screens/mainmenu.jpg)
-![target](https://github.com/muodov/sqlmapchik/screens/target.jpg)
-![mainlog](https://github.com/muodov/sqlmapchik/screens/log.jpg)
-![settings](https://github.com/muodov/sqlmapchik/screens/settings.jpg)
+![main menu](https://raw.github.com/muodov/sqlmapchik/master/screens/mainmenu.jpg)
+![target](https://raw.github.com/muodov/sqlmapchik/master/screens/target.jpg)
+![mainlog](https://raw.github.com/muodov/sqlmapchik/master/screens/log.jpg)
+![settings](https://raw.github.com/muodov/sqlmapchik/master/screens/settings.jpg)
 
 
 Installation (easy)
