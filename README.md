@@ -59,6 +59,8 @@ At this point, not all of sqlmap features are supported. Here is what doesn't wo
 * beeping :)
 * user-defined function injection
 * updating
+* metasploit integration
+* multithreading (currently working on it)
 
 Other features _should_ work. If you find an issue (I bet you will:), don't hesitate to report it on Github, by email, Twitter, pidgin mail etc.
 
