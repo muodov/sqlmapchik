@@ -200,16 +200,17 @@
                     id: scrolled_window
                     size_hint: 1, 1
                     scroll_y: 0
+                    do_scroll_x: False
 
-                    Label:
+                    TextInput:
                         id: output
                         size_hint: 1, None
-                        height: self.texture_size[1]
-                        #multiline: True
-                        #height: len(self._lines) * self.line_height
+                        # height: self.texture_size[1]
+                        multiline: True
+                        height: len(self._lines) * self.line_height
                         font_size: '12sp'
-                        #hint_text: 'Console log'
-                        #readonly: True
-                        # background_color: 0, 0, 0, 1
-                        # foreground_color: 1, 1, 1, 1
-                        text_size: scrolled_window.width, None
+                        hint_text: 'Console log'
+                        readonly: True
+                        background_color: 0, 0, 0, 1
+                        foreground_color: 1, 1, 1, 1
+                        # text_size: scrolled_window.width, None

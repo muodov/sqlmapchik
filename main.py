@@ -167,10 +167,12 @@ class Sqlmapchik(BoxLayout):
     log_buffer = ObjectProperty(Queue())
 
     def update_log(self, dt):
-        if not self.log_buffer.empty():
-            self.log_widget.text += self.log_buffer.get() + '\n'
-        if not self.log_buffer.empty():
-            self.log_widget.text += self.log_buffer.get() + '\n'
+        i = 0
+        buff = ''
+        while not self.log_buffer.empty() and i < 20:
+            buff += self.log_buffer.get() + '\n'
+            i += 1
+        self.log_widget.text += buff
 
     def launch_dialog(self):
         self._target_dialog = Popup(title="Choose target type", content=TargetDialog())
