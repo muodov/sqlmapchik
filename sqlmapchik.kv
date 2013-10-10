@@ -152,12 +152,19 @@
     # height: self.line_height
 
 
+<LogMessage>:
+    size_hint: 1, None
+    height: self.texture_size[1]
+    font_size: '12sp'
+    text_size: self.width, None
+
+
 <Sqlmapchik>:
     orientation: 'vertical'
     manager: manager
     menu_screen: menu_screen
     log_screen: log_screen
-    log_widget: output
+    scrolled_window: scrolled_window
 
     ScreenManager:
         id: manager
@@ -197,20 +204,13 @@
                 orientation: 'vertical'
 
                 ScrollView:
-                    id: scrolled_window
                     size_hint: 1, 1
                     scroll_y: 0
                     do_scroll_x: False
 
-                    TextInput:
-                        id: output
-                        size_hint: 1, None
-                        # height: self.texture_size[1]
-                        multiline: True
-                        height: len(self._lines) * self.line_height
-                        font_size: '12sp'
-                        hint_text: 'Console log'
-                        readonly: True
-                        background_color: 0, 0, 0, 1
-                        foreground_color: 1, 1, 1, 1
-                        # text_size: scrolled_window.width, None
+                    GridLayout:
+                        id: scrolled_window
+                        # orientation: 'vertical'
+                        cols: 1
+                        size_hint_y: None
+                        height: self.minimum_height

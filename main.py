@@ -6,7 +6,6 @@ Copyright (c) 2013 muodov (muodov[monkey]gmail.com)
 
 from kivy.app import App
 from kivy.logger import Logger
-from kivy.clock import Clock
 from kivy.properties import ListProperty, BooleanProperty, ObjectProperty, StringProperty
 from kivy.animation import Animation
 from kivy.uix.button import Button
@@ -17,7 +16,7 @@ import thread
 from functools import partial
 
 import sys
-from Queue import Queue
+import Queue
 import os.path
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sqlmap'))
 import chik_init_settings
@@ -163,16 +162,8 @@ class Sqlmapchik(BoxLayout):
     log_screen = ObjectProperty()
     current_target_widget = ObjectProperty(None)
     _target_dialog = ObjectProperty()
-    log_widget = ObjectProperty()
-    log_buffer = ObjectProperty(Queue())
-
-    def update_log(self, dt):
-        i = 0
-        buff = ''
-        while not self.log_buffer.empty() and i < 20:
-            buff += self.log_buffer.get() + '\n'
-            i += 1
-        self.log_widget.text += buff
+    log_buffer = ObjectProperty(Queue.Queue())
+    scrolled_window = ObjectProperty()
 
     def launch_dialog(self):
         self._target_dialog = Popup(title="Choose target type", content=TargetDialog())
@@ -251,7 +242,6 @@ class SqlmapchikApp(App):
     def build(self):
         self.menu_button = Button(text='Back to menu', size_hint=(1, 0.1), on_press=switch_to_menu)
         root = Sqlmapchik()
-        Clock.schedule_interval(root.update_log, 0.1)
         return root
 
     def _strip_forbidden_args(self, flaglist):
@@ -262,7 +252,7 @@ class SqlmapchikApp(App):
                 else:
                     #TODO: intelligently strip short arguments
                     pass
-                self.root.log_buffer.put('Sorry, %s flag is not supported in sqlmapchik. Ignoring.' % forbidden)
+                chik_hook.print_on_widget('Sorry, %s flag is not supported in sqlmapchik. Ignoring.' % forbidden)
 
     def main(self, additional_flags=''):
         """
@@ -308,26 +298,6 @@ class SqlmapchikApp(App):
 
     def on_resume(self):
         return True
-
-
-class ButtonWithDisable(Button):
-    activeColor = ListProperty([1, 1, 1, 1])
-    inactiveColor = ListProperty([2, .5, .5, 1])
-    active = BooleanProperty(True)
-
-    def __init__(self, *args, **kwargs):
-        super(ButtonWithDisable, self).__init__(*args, **kwargs)
-        self.color = self.activeColor
-
-    def on_active(self, who, what):
-        if (what):
-            self.color = self.activeColor
-        else:
-            self.color = self.inactiveColor
-
-    def on_touch_down(self, touch):
-        if (self.active):
-            return super(ButtonWithDisable, self).on_touch_down(touch)
 
 
 if __name__ == '__main__':

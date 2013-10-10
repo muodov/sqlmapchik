@@ -1,5 +1,10 @@
+"""
+Copyright (c) 2013 muodov (muodov[monkey]gmail.com)
+"""
+
 from kivy.uix.popup import Popup
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.label import Label
 from kivy.properties import StringProperty
 
 
@@ -52,3 +57,7 @@ class StringContent(AskContent):
 class StringPopup(AskPopup):
     def __init__(self, title, text, callback, **kwargs):
         super(StringPopup, self).__init__(StringContent, title, text, callback, **kwargs)
+
+
+class LogMessage(Label):
+    pass

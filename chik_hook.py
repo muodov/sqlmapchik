@@ -17,7 +17,7 @@ from kivy.clock import Clock
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.textinput import TextInput
 from kivy.uix.button import Button
-from yesnopopup import YesNoPopup, YesNoQuitPopup
+from yesnopopup import YesNoPopup, YesNoQuitPopup, LogMessage
 
 
 tlocal = threading.local()
@@ -68,15 +68,15 @@ lib.core.revision.getRevisionNumber = customGetRevisionNumber
 # Hook output
 import lib.core.common
 
-def print_on_widget(value, stderr, dt):
-    value = value.replace('\r', '')
-    if not stderr:
-        App.get_running_app().root.log_widget.text += value + '\n'
-    else:
-        App.get_running_app().root.log_widget.text += 'stderr: ' + value + '\n'
+def print_on_ui_thread(value, dt):
+    App.get_running_app().root.scrolled_window.add_widget(LogMessage(text=value))
+
+def print_on_widget(value):
+    Clock.schedule_once(partial(print_on_ui_thread, value), 0.2)
+
 
 def output_wrapper(data, forceOutput=False, bold=False, content_type=None, status=None):
-    App.get_running_app().root.log_buffer.put(data)
+    print_on_widget(data)
 
 def clearConsoleLineStub(arg=None):
     pass
@@ -116,7 +116,7 @@ def readInputWrapper(message, default=None, checkBatch=True):
     """
     res = originalReadInput(message, default, checkBatch)
     tlocal.pending_question = 'If you see this, something went wrong'
-    App.get_running_app().root.log_buffer.put('answer is %s' % res)
+    print_on_widget('answer is %s' % res)
     return res
 
 lib.core.common.readInput = readInputWrapper
@@ -174,7 +174,7 @@ class WidgetHandler(logging.Handler):
     def emit(self, record):
         try:
             msg = self.format(record)
-            App.get_running_app().root.log_buffer.put(msg)
+            print_on_widget(msg)
         except:
             self.handleError(record)
 
