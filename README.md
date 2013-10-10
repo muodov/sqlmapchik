@@ -17,7 +17,7 @@ Screenshots
 Installation (easy)
 ----
 
-The easiest way to install sqlmapchik on Android device is to [download it from Google Play](http://play.google.com/).
+The easiest way to install sqlmapchik on Android device is to download it from Google Play...when I publish it :). I hope I'll do this by next week.
 Note that Google Play version may not include the latest available sqlmap version.
 
 Installation (hacky)
