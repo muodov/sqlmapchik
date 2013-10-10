@@ -72,7 +72,7 @@ def print_on_ui_thread(value, dt):
     App.get_running_app().root.scrolled_window.add_widget(LogMessage(text=value))
 
 def print_on_widget(value):
-    Clock.schedule_once(partial(print_on_ui_thread, value), 0.2)
+    Clock.schedule_once(partial(print_on_ui_thread, value.replace('\r', '')), 0.2)
 
 
 def output_wrapper(data, forceOutput=False, bold=False, content_type=None, status=None):
