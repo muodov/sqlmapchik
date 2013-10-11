@@ -37,3 +37,6 @@ nosetests.xml
 
 # sqlmap
 sqlmap
+
+# local config
+sqlmapchik.ini

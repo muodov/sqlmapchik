@@ -95,12 +95,13 @@ class LoadDialog(FloatLayout):
 class TargetDialog(BoxLayout):
 
     def set_target(self, target_type, filename):
-        app = App.get_running_app()
-        app.target_type = target_type
-        app.target = filename[0] if isinstance(filename, list) else filename
-        self._dialog.dismiss()
-        app.root._target_dialog.dismiss()
-        app.main()
+        if filename:
+            app = App.get_running_app()
+            app.target_type = target_type
+            app.target = filename[0] if isinstance(filename, list) else filename
+            self._dialog.dismiss()
+            app.root._target_dialog.dismiss()
+            app.main()
 
     def cancel_load(self):
         self._dialog.dismiss()
