@@ -183,3 +183,10 @@ widget_handler = WidgetHandler()
 widget_handler.setFormatter(logging.Formatter("[%(asctime)s] [%(levelname)s] %(message)s", "%H:%M:%S"))
 # widget_handler.setLevel(logging.DEBUG)
 logger.addHandler(widget_handler)
+
+
+# disable os._exit to forbid exiting in multithreading mode
+original_exit = os._exit
+def exit_wrapper(status):
+    logger.warning('%s attempted to call os._exit(%d), ignoring' % (threading.current_thread().name, status))
+os._exit = exit_wrapper

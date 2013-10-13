@@ -11,6 +11,13 @@
         "desc": "Turn on all optimization switches"
     }, 
     {
+        "title": "--threads", 
+        "section": "Optimization", 
+        "key": "threads", 
+        "type": "numeric", 
+        "desc": "Max number of concurrent HTTP(s) requests (default 1)"
+    }, 
+    {
         "title": "--predict-output", 
         "section": "Optimization", 
         "values": [

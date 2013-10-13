@@ -35,7 +35,7 @@ FORBIDDEN_FLAGS = [
     '--msf-path',
     '--tmp-path',
     '--alert',
-    '--threads'
+    # '--threads'
     ]
 
 
