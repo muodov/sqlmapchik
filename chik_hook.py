@@ -68,12 +68,11 @@ lib.core.revision.getRevisionNumber = customGetRevisionNumber
 # Hook output
 import lib.core.common
 
-def print_on_ui_thread(value, dt):
-    App.get_running_app().root.scrolled_window.add_widget(LogMessage(text=value))
+def print_on_ui_thread(value, color, dt):
+    App.get_running_app().root.scrolled_window.add_widget(LogMessage(text=value, color=color[0], bold=color[1]))
 
-def print_on_widget(value):
-    Clock.schedule_once(partial(print_on_ui_thread, value.replace('\r', '')), 0.2)
-
+def print_on_widget(value, color=((1, 1, 1, 1), False)):
+    Clock.schedule_once(partial(print_on_ui_thread, value.replace('\r', ''), color), 0.2)
 
 def output_wrapper(data, forceOutput=False, bold=False, content_type=None, status=None):
     print_on_widget(data)
@@ -171,10 +170,21 @@ __builtin__.raw_input = user_interact
 
 # Hook logs
 class WidgetHandler(logging.Handler):
+    # colors for logmessages (rgba, bold):
+    level_colors = {
+        'DEBUG': ((0.328125, 0.734375, 0.88671875, 1), False),
+        'INFO': ((0.17578125, 0.765625, 0.203125, 1), False),
+        'WARNING': ((0.8671875, 0.8046875, 0.29296875, 1), False),
+        'ERROR': ((0.99609375, 0.296875, 0.1328125, 1), False),
+        'CRITICAL': ((0.99609375, 0.296875, 0.1328125, 1), True),
+        'PAYLOAD': ((0,1,1,1),False),
+        'TRAFFIC OUT': ((1,0,1,1),False),
+        'TRAFFIC IN': ((1,0,1,1),True),
+    }
     def emit(self, record):
         try:
             msg = self.format(record)
-            print_on_widget(msg)
+            print_on_widget(msg, self.level_colors[record.levelname])
         except:
             self.handleError(record)
 
