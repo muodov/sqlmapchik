@@ -198,6 +198,10 @@ logger.addHandler(widget_handler)
 from kivy.logger import Logger
 # disable os._exit to forbid exiting in multithreading mode
 original_exit = os._exit
+threading.current_thread().name = 'sqlmapchik_main_thread'
 def exit_wrapper(status):
-    Logger.warning('%s attempted to call os._exit(%d), ignoring' % (threading.current_thread().name, status))
+    if threading.current_thread().name == 'sqlmapchik_main_thread':
+        original_exit(status)
+    else:
+        Logger.warning('%s attempted to call os._exit(%d), ignoring' % (threading.current_thread().name, status))
 os._exit = exit_wrapper
