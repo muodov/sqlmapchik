@@ -185,8 +185,9 @@ widget_handler.setFormatter(logging.Formatter("[%(asctime)s] [%(levelname)s] %(m
 logger.addHandler(widget_handler)
 
 
+from kivy.logger import Logger
 # disable os._exit to forbid exiting in multithreading mode
 original_exit = os._exit
 def exit_wrapper(status):
-    logger.warning('%s attempted to call os._exit(%d), ignoring' % (threading.current_thread().name, status))
+    Logger.warning('%s attempted to call os._exit(%d), ignoring' % (threading.current_thread().name, status))
 os._exit = exit_wrapper
