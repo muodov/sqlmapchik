@@ -13,6 +13,7 @@ import os
 import re
 from functools import partial
 from kivy.app import App
+from kivy.logger import Logger as kivy_logger
 from kivy.clock import Clock
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.textinput import TextInput
@@ -82,6 +83,7 @@ def clearConsoleLineStub(arg=None):
 
 lib.core.common.dataToStdout = output_wrapper
 lib.core.common.clearConsoleLine = clearConsoleLineStub
+lib.core.common.getConsoleWidth = lambda x=80: x
 
 # Hook input
 originalReadInput = lib.core.common.readInput
@@ -184,6 +186,7 @@ class WidgetHandler(logging.Handler):
     def emit(self, record):
         try:
             msg = self.format(record)
+            kivy_logger.debug(msg)
             print_on_widget(msg, self.level_colors[record.levelname])
         except:
             self.handleError(record)
@@ -195,7 +198,6 @@ widget_handler.setFormatter(logging.Formatter("[%(asctime)s] [%(levelname)s] %(m
 logger.addHandler(widget_handler)
 
 
-from kivy.logger import Logger
 # disable os._exit to forbid exiting in multithreading mode
 original_exit = os._exit
 threading.current_thread().name = 'sqlmapchik_main_thread'
@@ -203,5 +205,5 @@ def exit_wrapper(status):
     if threading.current_thread().name == 'sqlmapchik_main_thread':
         original_exit(status)
     else:
-        Logger.warning('%s attempted to call os._exit(%d), ignoring' % (threading.current_thread().name, status))
+        kivy_logger.warning('%s attempted to call os._exit(%d), ignoring' % (threading.current_thread().name, status))
 os._exit = exit_wrapper
