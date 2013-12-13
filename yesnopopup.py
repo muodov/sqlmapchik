@@ -12,8 +12,8 @@ class AskPopup(Popup):
     def __init__(self, content_class, title, text, callback, **kwargs):
         # self.size_hint = (0.4, 0.4)
         content = content_class(text)
-        content.bind(on_answer=callback)
-        content.bind(on_answer=self.dismiss)
+        content.bind(on_answer=lambda inst, ans: (callback(inst, ans), self.dismiss()))
+        # content.bind(on_answer=self.dismiss)
         kwargs['content'] = content
         kwargs['auto_dismiss'] = False
         kwargs['title'] = title

@@ -116,6 +116,7 @@ def readInputWrapper(message, default=None, checkBatch=True):
 
     """
     res = originalReadInput(message, default, checkBatch)
+
     tlocal.pending_question = 'If you see this, something went wrong'
     print_on_widget('answer is %s' % res)
     return res
@@ -162,7 +163,6 @@ def user_interact(msg=''):
         Clock.schedule_once(partial(create_yesnoquitpopup, 'What next?', tlocal.pending_question, my_callback), 0)
     else:
         Clock.schedule_once(partial(create_stringpopup, my_callback), 0)
-
     lock.acquire()
     return context['answer']
 

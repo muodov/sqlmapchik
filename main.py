@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Copyright (c) 2013 muodov (muodov[monkey]gmail.com)
+Copyright (c) muodov (muodov[monkey]gmail.com)
 """
 
 from kivy.app import App
@@ -188,7 +188,6 @@ class SqlmapchikApp(App):
     running = BooleanProperty(False)
 
     def on_running(self, instance, value):
-        print 'on_running', instance, value
         if not value:
             self.root.log_screen.add_widget(self.menu_button)
         else:
@@ -266,6 +265,7 @@ class SqlmapchikApp(App):
             sys.argv = [sys.argv[0], '--disable-col'] + self.current_settings
         import time
         Logger.warning('starting at %s' % time.ctime())
+        chik_hook.print_on_widget('sqlmap launched with parameters: %s' % ' '.join(sys.argv[1:]), ((0.99609375, 0.296875, 0.1328125, 1), True))
         self.root.log_screen.remove_widget(self.menu_button)
         self.root.manager.current = 'log'
         self.running = True

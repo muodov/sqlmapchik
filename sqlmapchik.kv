@@ -1,4 +1,6 @@
 #:import TransitionClass kivy.uix.screenmanager.SlideTransition
+#:import partial functools.partial
+#:import Clock kivy.clock.Clock
 
 <TextInput>:
     use_bubble: False
@@ -90,9 +92,25 @@
         orientation: "vertical"
         TextInput:
             id: urlinput
+            size_hint: 1, 0.8
             hint_text: 'http://testphp.vulnweb.com/search.php?test=hi'
             text: 'http://testphp.vulnweb.com/search.php?test=hi'
             use_bubble: True
+
+        BoxLayout:
+            size_hint_y: 0.1
+            Button:
+                text: "<"
+                on_release: urlinput.do_cursor_movement('cursor_left')
+            Button:
+                text: ">"
+                on_release: urlinput.do_cursor_movement('cursor_right')
+            Button:
+                text: "Paste"
+                on_release: urlinput._ensure_clipboard(); Clock.schedule_once(lambda dt: urlinput._paste(), 0.5)
+            Button:
+                text: "Clear"
+                on_release: urlinput.text = ''
 
         BoxLayout:
             size_hint_y: 0.1
