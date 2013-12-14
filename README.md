@@ -28,7 +28,7 @@ To run sqlmapchik on desktop machine or to build a cutting-edge version of APK:
 1. git-clone sqlmapchik repository
 2. cd to sqlmapchik directory
 3. git-clone sqlmap (make sure that sqlmap containing folder is called ```sqlmap```)
-4. install [kivy](http://kivy.org/#download)
+4. install [kivy](http://kivy.org/#download) (1.8.0 is OK)
 5. you should be able to run sqlmapchik with ```python main.py```
 
 To run sqlmapchik on Android you have two options:
@@ -68,4 +68,4 @@ Links
 
 * sqlmap homepage: http://sqlmap.org
 * my twitter: [@muodov](https://twitter.com/muodov)
-* And, surely, you can [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=L5B7EALA4JRU4)
+
