@@ -11,6 +11,7 @@ import threading
 import logging
 import os
 import re
+import sys
 from functools import partial
 from kivy.app import App
 from kivy.logger import Logger as kivy_logger
@@ -24,6 +25,10 @@ from yesnopopup import YesNoPopup, YesNoQuitPopup, LogMessage
 tlocal = threading.local()
 tlocal.pending_question = 'If you see this, something went wrong'
 
+
+# cProfile module seems to be currently unstable on iOS. After all, who needs --profile flag? ;D
+import fake_profiling
+sys.modules['lib.core.profiling'] = fake_profiling
 
 # Hook version check
 def customGetRevisionNumber():

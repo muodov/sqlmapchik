@@ -122,14 +122,7 @@
         "key": "hex", 
         "type": "bool", 
         "desc": "Use DBMS hex function(s) for data retrieval"
-    }, 
-    {
-        "section": "General", 
-        "desc": "Custom output directory path", 
-        "type": "string", 
-        "key": "output-dir", 
-        "title": "--output-dir"
-    }, 
+    },
     {
         "title": "--parse-errors", 
         "section": "General", 

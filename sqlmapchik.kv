@@ -87,44 +87,49 @@
 
 <UrlDialog>:
     BoxLayout:
+        spacing: 100
+        padding: 10
         size: root.size
         pos: root.pos
         orientation: "vertical"
         TextInput:
             id: urlinput
-            size_hint: 1, 0.8
+            size_hint: 1, 0.4
             hint_text: 'http://testphp.vulnweb.com/search.php?test=hi'
             text: 'http://testphp.vulnweb.com/search.php?test=hi'
             use_bubble: True
 
         BoxLayout:
-            size_hint_y: 0.1
-            Button:
-                text: "<"
-                on_release: urlinput.do_cursor_movement('cursor_left')
-            Button:
-                text: ">"
-                on_release: urlinput.do_cursor_movement('cursor_right')
-            Button:
-                text: "Paste"
-                on_release: urlinput._ensure_clipboard(); Clock.schedule_once(lambda dt: urlinput._paste(), 0.5)
-            Button:
-                text: "Clear"
-                on_release: urlinput.text = ''
+            orientation: "vertical"
+            
+            BoxLayout:
+                size_hint_y: 0.1
+                Button:
+                    text: "<"
+                    on_release: urlinput.do_cursor_movement('cursor_left')
+                Button:
+                    text: ">"
+                    on_release: urlinput.do_cursor_movement('cursor_right')
+                Button:
+                    text: "Paste"
+                    on_release: urlinput._ensure_clipboard(); Clock.schedule_once(lambda dt: urlinput._paste(), 0.5)
+                Button:
+                    text: "Clear"
+                    on_release: urlinput.text = ''
 
-        BoxLayout:
-            size_hint_y: 0.1
-            Button:
-                text: "Cancel"
-                on_release: root.cancel()
+            BoxLayout:
+                size_hint_y: 0.1
+                Button:
+                    text: "Cancel"
+                    on_release: root.cancel()
 
-            Button:
-                text: "OK"
-                on_release: root.load(urlinput.text)
+                Button:
+                    text: "OK"
+                    on_release: root.load(urlinput.text)
 
 <TargetDialog>:
     orientation: "vertical"
-    padding: [0, 50, 0, 50]
+    padding: [0, 50, 0, 0]
     spacing: 30
 
     Button:
@@ -132,36 +137,41 @@
         size_hint_x: 0.6
         pos_hint: {'x': 0.2}
         text: 'URL'
-        on_press: root.url_dialog()
+        on_release: root.url_dialog()
 
     Button:
         id: target_logfile_button
         size_hint_x: 0.6
         pos_hint: {'x': 0.2}
         text: 'logfile'
-        on_press: root.log_dialog()
+        on_release: root.log_dialog()
 
     Button:
         id: target_bulkfile_button
         size_hint_x: 0.6
         pos_hint: {'x': 0.2}
         text: 'bulk file'
-        on_press: root.bulk_dialog()
+        on_release: root.bulk_dialog()
 
     Button:
         id: target_requestfile_button
         size_hint_x: 0.6
         pos_hint: {'x': 0.2}
         text: 'request file'
-        on_press: root.request_dialog()
+        on_release: root.request_dialog()
 
     Button:
         id: target_inifile_button
         size_hint_x: 0.6
         pos_hint: {'x': 0.2}
         text: 'INI config'
-        on_press: root.ini_dialog()
+        on_release: root.ini_dialog()
 
+    Button:
+        id: target_back_button
+        size_hint_x: 1
+        text: 'back to menu'
+        on_release: app.root._target_dialog.dismiss()
 
 <FileChooseButton>:
     text: 'Choose a file...'
@@ -208,14 +218,14 @@
                     size_hint: 0.6, 0.3
                     pos_hint: {'x': 0.2}
                     text: 'Start scan'
-                    on_press: root.launch_dialog()#app.main(target_url.text, additional_flags.text)
+                    on_release: root.launch_dialog()#app.main(target_url.text, additional_flags.text)
 
                 Button:
                     id: open_options_button
                     size_hint: 0.6, 0.2
                     pos_hint: {'x': 0.2}
-                    text: 'Options'
-                    on_press: app.open_settings()
+                    text: 'Settings'
+                    on_release: Clock.schedule_once(lambda dt: app.open_settings(), 0)
 
         Screen:
             name: 'log'

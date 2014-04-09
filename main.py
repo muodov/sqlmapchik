@@ -1,9 +1,10 @@
 #!/usr/bin/env python
-
+__version__ = '1.3'
 """
 Copyright (c) muodov (muodov[monkey]gmail.com)
 """
 
+from kivy import platform
 from kivy.app import App
 from kivy.logger import Logger
 from kivy.properties import ListProperty, BooleanProperty, ObjectProperty, StringProperty
@@ -35,6 +36,7 @@ FORBIDDEN_FLAGS = [
     '--msf-path',
     '--tmp-path',
     '--alert',
+    '--profile',
     # '--threads'
     ]
 
@@ -254,17 +256,14 @@ class SqlmapchikApp(App):
                     pass
                 chik_hook.print_on_widget('Sorry, %s flag is not supported in sqlmapchik. Ignoring.' % forbidden)
 
-    def main(self, additional_flags=''):
+    def main(self):
         """
         Main function of sqlmap when running from command line.
         """
 
-        if additional_flags:
-            pass
-        else:
-            sys.argv = [sys.argv[0], '--disable-col'] + self.current_settings
-        import time
-        Logger.warning('starting at %s' % time.ctime())
+        sys.argv = [sys.argv[0], '--disable-col'] + self.current_settings
+        if platform == 'ios':
+            sys.argv.append('--output-dir=' + os.path.expanduser('~/Documents/sqlmapchikcache'))
         chik_hook.print_on_widget('sqlmap launched with parameters: %s' % ' '.join(sys.argv[1:]), ((0.99609375, 0.296875, 0.1328125, 1), True))
         self.root.log_screen.remove_widget(self.menu_button)
         self.root.manager.current = 'log'

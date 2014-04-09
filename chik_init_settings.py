@@ -14,7 +14,7 @@ def init_defaults(config):
         'forms': 'False',
         'fresh-queries': 'False',
         'hex': 'False',
-        'output-dir': '',
+        #'output-dir': '',
         'parse-errors': 'False',
         'pivot-column': '',
         'save': 'False',
