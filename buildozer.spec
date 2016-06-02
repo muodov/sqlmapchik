@@ -2,7 +2,7 @@
 
 # (str) Title of your application
 #title = sqlmapchiktest
-title = sqlmapchikt
+title = sqlmapchik
 
 # (str) Package name
 #package.name = sqlmapchiktest
@@ -137,10 +137,10 @@ android.wakelock = True
 
 # (str) Name of the certificate to use for signing the debug version
 # Get a list of available identities: buildozer ios list_identities
-#ios.codesign.debug = "iPhone Developer: <lastname> <firstname> (<hexstring>)"
+ios.codesign.debug = "iPhone Developer: Maxim Tsoy (TJVQ4E7M4B)"
 
 # (str) Name of the certificate to use for signing the release version
-#ios.codesign.release = %(ios.codesign.debug)s
+ios.codesign.release = "iPhone Distribution: Maxim Tsoy (MB377U66YZ)"
 
 
 [buildozer]

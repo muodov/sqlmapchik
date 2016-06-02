@@ -2,6 +2,7 @@
 Copyright (c) 2013 muodov (muodov[monkey]gmail.com)
 """
 
+
 from kivy.uix.popup import Popup
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
@@ -18,6 +19,7 @@ class AskPopup(Popup):
         kwargs['auto_dismiss'] = False
         kwargs['title'] = title
         super(AskPopup, self).__init__(**kwargs)
+
 
 
 class AskContent(BoxLayout):
