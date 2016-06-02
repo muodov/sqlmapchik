@@ -68,4 +68,3 @@ Links
 
 * sqlmap homepage: http://sqlmap.org
 * my twitter: [@muodov](https://twitter.com/muodov)
-
